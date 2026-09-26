@@ -1,0 +1,5 @@
+AppExceptions
+| where TimeGenerated > ago(1h)
+| summarize ErrorCount = count()
+    by bin(TimeGenerated, 5m), ProblemId
+| order by TimeGenerated asc

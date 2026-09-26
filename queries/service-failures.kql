@@ -1,0 +1,6 @@
+AzureActivity
+| where TimeGenerated > ago(1h)
+| where ActivityStatusValue == "Failed"
+| summarize FailedOperations = count()
+    by ResourceGroup, ResourceProviderValue
+| order by FailedOperations desc
