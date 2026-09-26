@@ -1,0 +1,6 @@
+AppRequests
+| where TimeGenerated > ago(1h)
+| where ResultCode startswith "5"
+| summarize ErrorCount = count()
+    by bin(TimeGenerated, 5m)
+| order by TimeGenerated asc

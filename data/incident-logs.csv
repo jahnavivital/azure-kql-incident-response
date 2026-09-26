@@ -1,0 +1,13 @@
+TimeGenerated,Level,Service,Message
+2026-09-26T09:00:00Z,INFO,AuthService,Login successful user=U101
+2026-09-26T09:02:00Z,ERROR,PaymentService,Payment timeout user=U102 duration=5230ms
+2026-09-26T09:04:00Z,ERROR,PaymentService,Database connection failed server=db01
+2026-09-26T09:06:00Z,WARNING,OrderService,Slow request user=U103 duration=3450ms
+2026-09-26T09:08:00Z,ERROR,AuthService,Login failed user=U104 ip=192.168.1.20
+2026-09-26T09:10:00Z,ERROR,WebService,HTTP 500 Internal Server Error endpoint=/api/orders
+2026-09-26T09:12:00Z,INFO,AuthService,Login successful user=U105
+2026-09-26T09:14:00Z,ERROR,PaymentService,Payment timeout user=U106 duration=6120ms
+2026-09-26T09:16:00Z,ERROR,WebService,HTTP 503 Service Unavailable endpoint=/api/payment
+2026-09-26T09:18:00Z,WARNING,OrderService,Slow request user=U107 duration=4210ms
+2026-09-26T09:20:00Z,ERROR,AuthService,Login failed user=U108 ip=192.168.1.25
+2026-09-26T09:22:00Z,ERROR,DatabaseService,Connection pool exhausted server=db02
