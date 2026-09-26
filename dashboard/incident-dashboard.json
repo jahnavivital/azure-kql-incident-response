@@ -1,0 +1,24 @@
+{
+  "project": "Azure Log Analytics KQL Query Library",
+  "total_incidents": 10,
+  "severity": {
+    "HIGH": 7,
+    "MEDIUM": 3
+  },
+  "incident_types": {
+    "Payment Timeout": 2,
+    "Database Failure": 1,
+    "Slow Request": 1,
+    "Authentication Failure": 2,
+    "HTTP Failure": 2,
+    "Critical Slow Request": 1,
+    "Database Resource Exhaustion": 1
+  },
+  "services": {
+    "PaymentService": 3,
+    "OrderService": 2,
+    "AuthService": 2,
+    "WebService": 2,
+    "DatabaseService": 1
+  }
+}
