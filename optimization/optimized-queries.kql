@@ -1,0 +1,12 @@
+// Optimized HTTP 5xx Error Query
+// Techniques: early filtering, time restriction, required columns only
+
+AppRequests
+| where TimeGenerated > ago(1h)
+| where ResultCode startswith "5"
+| project TimeGenerated, Name, ResultCode, DurationMs
+| summarize
+    ErrorCount = count(),
+    AverageDuration = avg(DurationMs)
+    by bin(TimeGenerated, 5m), ResultCode
+| order by TimeGenerated asc
